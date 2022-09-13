@@ -9,7 +9,7 @@ services:
     ports:
      - 6901
     environment:
-     VNC_PW: 'warn1234'
+     VNC_PW: 'warn123456'
     deploy:
       replicas: 1
       resources:
