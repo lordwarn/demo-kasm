@@ -1,0 +1,21 @@
+version: '3.3'
+services:
+  test-volume:
+    image: lordwarn/kasm:20220913
+    shm_size: '512mb'
+    volumes:
+     - /etc/time/zone:/etc/timezone:ro
+     - /etc/localtime:/etc/localtime:ro
+    ports:
+     - 6901
+    environment:
+     VNC_PW: 'warn1234'
+    deploy:
+      replicas: 1
+      resources:
+        reservations:
+          cpus: '0.1'
+          memory: 512M
+        limits:
+          cpus: '0.4'
+          memory: 4G
