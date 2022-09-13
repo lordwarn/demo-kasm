@@ -4,10 +4,10 @@ services:
     image: lordwarn/kasm:20220913
     shm_size: '512mb'
     volumes:
-     - /etc/time/zone:/etc/timezone:ro
+     - /etc/timezone:/etc/timezone:ro
      - /etc/localtime:/etc/localtime:ro
     ports:
-     - 6901
+     - :6901
     environment:
      VNC_PW: 'warn1234'
     deploy:
