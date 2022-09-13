@@ -7,7 +7,7 @@ services:
      - /etc/timezone:/etc/timezone:ro
      - /etc/localtime:/etc/localtime:ro
     ports:
-     - :6901
+     - 6901
     environment:
      VNC_PW: 'warn1234'
     deploy:
